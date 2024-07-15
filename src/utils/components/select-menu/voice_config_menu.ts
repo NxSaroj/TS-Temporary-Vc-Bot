@@ -13,10 +13,5 @@ export default new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(
         .setValue("manage-voice-module")
         .setLabel("Manage Module")
         .setDescription("Enable or Disable the module"),
-
-        new StringSelectMenuOptionBuilder()
-        .setValue("rest-voice-module")
-        .setLabel("Reset Module")
-        .setDescription("Reset the module"),
     ])
 );

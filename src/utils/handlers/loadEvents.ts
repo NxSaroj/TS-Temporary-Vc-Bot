@@ -13,18 +13,15 @@ export function loadEvents(client: Client) {
     const files = getFiles(folder);
 
     for (const file of files) {
-      console.log(file);
       if (!file.endsWith(".ts") && !file.endsWith(".js")) continue;
 
       const event = require(file).event;
-
+      console.log(colors.blue(`Loaded event ${eventName}`));
       if (event.once) {
         client.once(eventName, (...args) => event.run(client, ...args));
       } else {
         client.on(eventName, (...args) => event.run(client, ...args));
       }
     }
-
-    console.log(`Loaded event ${eventName}`);
   }
 }

@@ -26,7 +26,7 @@ import {
     menu.addOptions([
       new StringSelectMenuOptionBuilder()
       .setValue(m.custom_id)
-       .setLabel(m.label?? "nul")
+       .setLabel(m.label)
        .setDescription(m.description),
     ]);
   });
